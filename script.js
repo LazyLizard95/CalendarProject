@@ -1,9 +1,45 @@
-//need to create rows 8 am - 5pm
-//rows change color in accorandce to time
-//when a row is clicked you may edit the field
-//a button to the right of the row to save
-let editMe = document.querySelector(".editMe");
-let saveBtn = document.querySelector(".saveBtn");
-let timeBlocks = document.querySelectorAll("p#time");
+$(document).ready(function() {
+    let date = moment().format("MM/DD/YYYY, H:mm, h:mm a");
+    $("#currentDay").append(date);
+    
+});
 
-//console.log(Date.today())
+let hour = moment().format("H00")
+
+for (i = 0; i < 12; i++) {
+$(".timeValue8").siblings().each(function() {
+
+    switch (hour){
+        case (hour < $("#id")):
+            console.log("hour is less than timevalue");
+        break;
+        case (hour > $("#id")):
+            console.log("hour is greater than timevalue");
+        break;
+        default: console.log("hour is equal to timevalue");
+    }
+    
+    
+    
+
+})
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
