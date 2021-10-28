@@ -4,30 +4,35 @@ $(document).ready(function() {
     
 });
 
-let hour = moment().format("H00")
-let timeValue = $(".timeValue8")
+let hour = moment().format("H")
+// let timeValue = $(".timeValue");
+let timeValue = $(".timeValue").map(function(){
+    return this.id;
+}).get();
 
-timeValue.siblings().each(function() {
-    
-                
-console.log(timeValue.text());
-    switch (hour, timeValue.text()){
-        case (hour < timeValue.text()):
+
+function checkTime(timeValue){
+                for(let i = 0; i < timeValue.length; i++){
+                console.log(hour);    
+                console.log(timeValue[i]);
+  
+switch (hour, timeValue[i]){
+        case (hour < timeValue[i]):
             console.log("hour is less than timevalue");
         break;
-        case (hour > timeValue.text()):
+        case (hour > timeValue[i]):
             console.log("hour is greater than timevalue");
-        
-        case (timeValue.text() === hour):
+        break;
+        case (hour === timeValue[i]):
             console.log("hour is equal to timevalue");
         break;
-        default: console.log("ERROR");
+        default: console.log("NaN");
     }
-}  
-    
-    
+}
+}   
+    checkTime(timeValue);
 
-)
+
 
 
 
