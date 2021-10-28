@@ -5,26 +5,31 @@ $(document).ready(function() {
 });
 
 let hour = moment().format("H00")
+let timeValue = $(".timeValue8").siblings();
 
-for (i = 0; i < 12; i++) {
-$(".timeValue8").siblings().each(function() {
-
-    switch (hour){
-        case (hour < $("#id")):
+timeValue.each(function() {
+    
+                
+console.log(hour, timeValue.text());
+    switch (hour, timeValue){
+        case (hour < timeValue):
             console.log("hour is less than timevalue");
         break;
-        case (hour > $("#id")):
+        case (hour > timeValue):
             console.log("hour is greater than timevalue");
+        
+        case (timeValue === hour):
+            console.log("hour is equal to timevalue");
         break;
-        default: console.log("hour is equal to timevalue");
+        default: console.log("ERROR");
     }
-    
+}  
     
     
 
-})
+)
 
-}
+
 
 
 
