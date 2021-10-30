@@ -9,29 +9,30 @@ let timeValue = $(".timeValue").map(function(){
 }).get();
 // console.log(hour)
 // console.log(timeValue)
-function checkTime(timeValue){
+
     for(let i = 0; i < timeValue.length; i++){
-            
+        parseInt(timeValue[i]);
+        parseInt(hour);
         if (hour > timeValue[i]){
-            $(".timeValue").addClass("past");
+            $("#" + timeValue[i]).addClass("past");
             console.log("hour is less than timevalue");
         }
         if (hour < timeValue[i]){
-            $(".timeValue").addClass("future");
+            $("#" + timeValue[i]).addClass("future");
             console.log(hour);
             console.log(timeValue[i]);
             console.log("hour is less than timevalue");
         }
         if (hour === timeValue[i]){
-            $(".timeValue").addClass("present");
+            $("#" + timeValue[i]).addClass("present");
             
             console.log("hour is greater than timevalue");
         }
     
     }
 
-}
-checkTime(timeValue);
+
+
 
 
 
