@@ -8,6 +8,7 @@ let timeValue = $(".timeValue").map(function () {
     return this.id; //create array with all timeValue id
 }).get();
 
+
 for (let i = 0; i < timeValue.length; i++) {
     if (parseInt(hour) > parseInt(timeValue[i])) {
         $("#" + timeValue[i]).addClass("past");
@@ -20,7 +21,12 @@ for (let i = 0; i < timeValue.length; i++) {
     }
 }
 
-
+$(".saveBtn").click(function(){
+    for (i = 0; i < timeValue.length; i++) {
+    textAreaVal = $("#textarea").val();
+    localStorage.setItem('userTasks', textAreaVal);
+    }
+})
 
 
 
